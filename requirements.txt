@@ -1,0 +1,10 @@
+streamlit
+langchain==0.1.12
+langchain-core==0.1.53
+langchain-community==0.0.38
+langchain-openai==0.0.8
+openai>=1.10.0,<2.0.0
+tiktoken>=0.5.2,<1.0.0
+pillow
+chromadb
+pypdf2
