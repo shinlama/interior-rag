@@ -51,7 +51,7 @@ if uploaded_image:
                             {"type": "text", "text": f"""
                                 이 이미지를 보고 가장 적합한 스타일을 고르고 이유를 상세히 설명하세요.
                                 스타일 리스트: {', '.join(styles)}
-                                또한 색상, 가구 배치, 스타일에 대한 간단한 평가도 추가해주세요.
+                                또한 색상, 가구 배치, 스타일에 대한 간단한 평가도 추가해주세요. 가구에 색상이 있다면 정확하게 표현해주세요.
                             """},
                             {"type": "image_url", "image_url": {
                                 "url": f"data:image/jpeg;base64,{encoded_image}"
@@ -105,7 +105,7 @@ if uploaded_image:
                 # 상세한 리모델링 방안 추가 요청
                 remodel_prompt = f"""
                 위의 전문가 평가를 기반으로 이 공간의 리모델링 방안을 더욱 구체적으로 설명해주세요.
-                추천하는 스타일, 색상 조합, 가구 배치 방법, 인테리어 소품까지 상세하게 포함해주세요.
+                추천하는 인테리어 소품 추천이나 가구 배치 방법, 색상 조합 등을 구체적으로 포함해주세요.
                 """
 
                 remodel_result = qa_chain({"question": remodel_prompt})
