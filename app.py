@@ -103,7 +103,7 @@ if uploaded_image:
 
                 # OpenAI Embeddings로 벡터DB 생성 (Chroma 유지)
                 embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-                vectorstore = Chroma.from_documents(texts, embeddings, persist_directory="vectordb")
+                vectorstore = Chroma.from_documents(documents=texts, embedding=embeddings, persist_directory="vectordb")
 
                 # 신뢰성 높은 출처 정보 포함하여 결과 생성
                 retriever = vectorstore.as_retriever(
