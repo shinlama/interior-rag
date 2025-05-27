@@ -1,3 +1,6 @@
+# Vector database
+vectordb/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -31,8 +34,11 @@ ENV/
 *.swp
 *.swo
 
+# OS
+.DS_Store
+Thumbs.db
+
 # Project specific
-vectordb/
 *.bin
 *.pickle
 *.sqlite3
