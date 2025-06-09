@@ -6,6 +6,6 @@ langchain-openai==0.0.8
 openai>=1.10.0,<2.0.0
 tiktoken>=0.5.2,<1.0.0
 pillow
-chromadb
+chromadb==0.3.29
 pypdf
 protobuf==3.20.*
